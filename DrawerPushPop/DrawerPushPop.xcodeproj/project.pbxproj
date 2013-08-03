@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8C5A65C17AD6F7F00B09064 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5A65B17AD6F7F00B09064 /* UIKit.framework */; };
+		D8C5A65E17AD6F7F00B09064 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5A65D17AD6F7F00B09064 /* Foundation.framework */; };
+		D8C5A66017AD6F7F00B09064 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5A65F17AD6F7F00B09064 /* CoreGraphics.framework */; };
+		D8C5A66617AD6F7F00B09064 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A66417AD6F7F00B09064 /* InfoPlist.strings */; };
+		D8C5A66817AD6F7F00B09064 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A66717AD6F7F00B09064 /* main.m */; };
+		D8C5A66C17AD6F7F00B09064 /* ZYQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A66B17AD6F7F00B09064 /* ZYQAppDelegate.m */; };
+		D8C5A66E17AD6F7F00B09064 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A66D17AD6F7F00B09064 /* Default.png */; };
+		D8C5A67017AD6F7F00B09064 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A66F17AD6F7F00B09064 /* Default@2x.png */; };
+		D8C5A67217AD6F7F00B09064 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A67117AD6F7F00B09064 /* Default-568h@2x.png */; };
+		D8C5A68617AD701200B09064 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5A68517AD701200B09064 /* QuartzCore.framework */; };
+		D8C5A68A17AD725D00B09064 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A68817AD725400B09064 /* ViewController.m */; };
+		D8C5A68B17AD725D00B09064 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A68917AD725700B09064 /* ViewController.xib */; };
+		D8C5A68E17AD726E00B09064 /* TSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A68D17AD726D00B09064 /* TSNavigationController.m */; };
+		D8C5A69217AD729300B09064 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69017AD729300B09064 /* ViewController2.m */; };
+		D8C5A69317AD729300B09064 /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A69117AD729300B09064 /* ViewController2.xib */; };
+		D8C5A69817AD72AA00B09064 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69517AD72A900B09064 /* DrawerView.m */; };
+		D8C5A69917AD72AA00B09064 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69717AD72AA00B09064 /* DrawerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D8C5A65817AD6F7F00B09064 /* DrawerPushPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerPushPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C5A65B17AD6F7F00B09064 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D8C5A65D17AD6F7F00B09064 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D8C5A65F17AD6F7F00B09064 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D8C5A66317AD6F7F00B09064 /* DrawerPushPop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrawerPushPop-Info.plist"; sourceTree = "<group>"; };
+		D8C5A66517AD6F7F00B09064 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8C5A66717AD6F7F00B09064 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8C5A66917AD6F7F00B09064 /* DrawerPushPop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawerPushPop-Prefix.pch"; sourceTree = "<group>"; };
+		D8C5A66A17AD6F7F00B09064 /* ZYQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYQAppDelegate.h; sourceTree = "<group>"; };
+		D8C5A66B17AD6F7F00B09064 /* ZYQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYQAppDelegate.m; sourceTree = "<group>"; };
+		D8C5A66D17AD6F7F00B09064 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D8C5A66F17AD6F7F00B09064 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D8C5A67117AD6F7F00B09064 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D8C5A68517AD701200B09064 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D8C5A68717AD725200B09064 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D8C5A68817AD725400B09064 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D8C5A68917AD725700B09064 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		D8C5A68C17AD726D00B09064 /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
+		D8C5A68D17AD726D00B09064 /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
+		D8C5A68F17AD729200B09064 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		D8C5A69017AD729300B09064 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		D8C5A69117AD729300B09064 /* ViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
+		D8C5A69417AD72A900B09064 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
+		D8C5A69517AD72A900B09064 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
+		D8C5A69617AD72AA00B09064 /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
+		D8C5A69717AD72AA00B09064 /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8C5A65517AD6F7F00B09064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C5A68617AD701200B09064 /* QuartzCore.framework in Frameworks */,
+				D8C5A65C17AD6F7F00B09064 /* UIKit.framework in Frameworks */,
+				D8C5A65E17AD6F7F00B09064 /* Foundation.framework in Frameworks */,
+				D8C5A66017AD6F7F00B09064 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8C5A64F17AD6F7F00B09064 = {
+			isa = PBXGroup;
+			children = (
+				D8C5A66117AD6F7F00B09064 /* DrawerPushPop */,
+				D8C5A65A17AD6F7F00B09064 /* Frameworks */,
+				D8C5A65917AD6F7F00B09064 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8C5A65917AD6F7F00B09064 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5A65817AD6F7F00B09064 /* DrawerPushPop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8C5A65A17AD6F7F00B09064 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5A68517AD701200B09064 /* QuartzCore.framework */,
+				D8C5A65B17AD6F7F00B09064 /* UIKit.framework */,
+				D8C5A65D17AD6F7F00B09064 /* Foundation.framework */,
+				D8C5A65F17AD6F7F00B09064 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8C5A66117AD6F7F00B09064 /* DrawerPushPop */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5A66A17AD6F7F00B09064 /* ZYQAppDelegate.h */,
+				D8C5A66B17AD6F7F00B09064 /* ZYQAppDelegate.m */,
+				D8C5A68C17AD726D00B09064 /* TSNavigationController.h */,
+				D8C5A68D17AD726D00B09064 /* TSNavigationController.m */,
+				D8C5A69417AD72A900B09064 /* DrawerView.h */,
+				D8C5A69517AD72A900B09064 /* DrawerView.m */,
+				D8C5A69617AD72AA00B09064 /* DrawerViewController.h */,
+				D8C5A69717AD72AA00B09064 /* DrawerViewController.m */,
+				D8C5A68717AD725200B09064 /* ViewController.h */,
+				D8C5A68817AD725400B09064 /* ViewController.m */,
+				D8C5A68917AD725700B09064 /* ViewController.xib */,
+				D8C5A68F17AD729200B09064 /* ViewController2.h */,
+				D8C5A69017AD729300B09064 /* ViewController2.m */,
+				D8C5A69117AD729300B09064 /* ViewController2.xib */,
+				D8C5A66217AD6F7F00B09064 /* Supporting Files */,
+			);
+			path = DrawerPushPop;
+			sourceTree = "<group>";
+		};
+		D8C5A66217AD6F7F00B09064 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5A66317AD6F7F00B09064 /* DrawerPushPop-Info.plist */,
+				D8C5A66417AD6F7F00B09064 /* InfoPlist.strings */,
+				D8C5A66717AD6F7F00B09064 /* main.m */,
+				D8C5A66917AD6F7F00B09064 /* DrawerPushPop-Prefix.pch */,
+				D8C5A66D17AD6F7F00B09064 /* Default.png */,
+				D8C5A66F17AD6F7F00B09064 /* Default@2x.png */,
+				D8C5A67117AD6F7F00B09064 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8C5A65717AD6F7F00B09064 /* DrawerPushPop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8C5A67517AD6F7F00B09064 /* Build configuration list for PBXNativeTarget "DrawerPushPop" */;
+			buildPhases = (
+				D8C5A65417AD6F7F00B09064 /* Sources */,
+				D8C5A65517AD6F7F00B09064 /* Frameworks */,
+				D8C5A65617AD6F7F00B09064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawerPushPop;
+			productName = DrawerPushPop;
+			productReference = D8C5A65817AD6F7F00B09064 /* DrawerPushPop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8C5A65017AD6F7F00B09064 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZYQ;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Zhao Yiqi";
+			};
+			buildConfigurationList = D8C5A65317AD6F7F00B09064 /* Build configuration list for PBXProject "DrawerPushPop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D8C5A64F17AD6F7F00B09064;
+			productRefGroup = D8C5A65917AD6F7F00B09064 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8C5A65717AD6F7F00B09064 /* DrawerPushPop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8C5A65617AD6F7F00B09064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C5A66617AD6F7F00B09064 /* InfoPlist.strings in Resources */,
+				D8C5A66E17AD6F7F00B09064 /* Default.png in Resources */,
+				D8C5A67017AD6F7F00B09064 /* Default@2x.png in Resources */,
+				D8C5A67217AD6F7F00B09064 /* Default-568h@2x.png in Resources */,
+				D8C5A68B17AD725D00B09064 /* ViewController.xib in Resources */,
+				D8C5A69317AD729300B09064 /* ViewController2.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8C5A65417AD6F7F00B09064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C5A66817AD6F7F00B09064 /* main.m in Sources */,
+				D8C5A66C17AD6F7F00B09064 /* ZYQAppDelegate.m in Sources */,
+				D8C5A68A17AD725D00B09064 /* ViewController.m in Sources */,
+				D8C5A68E17AD726E00B09064 /* TSNavigationController.m in Sources */,
+				D8C5A69217AD729300B09064 /* ViewController2.m in Sources */,
+				D8C5A69817AD72AA00B09064 /* DrawerView.m in Sources */,
+				D8C5A69917AD72AA00B09064 /* DrawerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8C5A66417AD6F7F00B09064 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8C5A66517AD6F7F00B09064 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8C5A67317AD6F7F00B09064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8C5A67417AD6F7F00B09064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8C5A67617AD6F7F00B09064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawerPushPop/DrawerPushPop-Prefix.pch";
+				INFOPLIST_FILE = "DrawerPushPop/DrawerPushPop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D8C5A67717AD6F7F00B09064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrawerPushPop/DrawerPushPop-Prefix.pch";
+				INFOPLIST_FILE = "DrawerPushPop/DrawerPushPop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8C5A65317AD6F7F00B09064 /* Build configuration list for PBXProject "DrawerPushPop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C5A67317AD6F7F00B09064 /* Debug */,
+				D8C5A67417AD6F7F00B09064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8C5A67517AD6F7F00B09064 /* Build configuration list for PBXNativeTarget "DrawerPushPop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C5A67617AD6F7F00B09064 /* Debug */,
+				D8C5A67717AD6F7F00B09064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8C5A65017AD6F7F00B09064 /* Project object */;
+}
