@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) ViewController *viewController;
 
-@property (strong, nonatomic) TSNavigationController *navigationController;
+@property (strong, nonatomic) DrawerNavigationController *navigationController;
 
 +(ZYQAppDelegate*)instance;
 

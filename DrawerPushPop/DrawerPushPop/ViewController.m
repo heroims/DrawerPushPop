@@ -30,5 +30,6 @@
 - (IBAction)go2nextPage:(id)sender {
     ViewController2 *debugPanel = [[ViewController2 alloc] init];
 	[self.navigationController pushViewController:debugPanel animated:YES];
+    [debugPanel release];
 }
 @end

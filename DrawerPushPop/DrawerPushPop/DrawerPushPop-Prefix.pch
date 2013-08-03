@@ -11,6 +11,6 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import "TSNavigationController.h"
+    #import "DrawerNavigationController.h"
     #import "ZYQAppDelegate.h"
 #endif

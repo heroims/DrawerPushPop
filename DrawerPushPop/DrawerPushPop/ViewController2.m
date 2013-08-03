@@ -8,7 +8,7 @@
 
 #import "ViewController2.h"
 #import "ViewController.h"
-#import "TSNavigationController.h"
+#import "DrawerNavigationController.h"
 @interface ViewController2 ()
 
 @end
@@ -41,9 +41,10 @@
 //    float seed = arc4random() % 2;
 //	[self.navigationController pushViewController:debugPanel animated:seed < 0.5 ? YES : NO];
     [self.navigationController pushViewController:debugPanel animated:YES];
+    [debugPanel release];
 }
 - (IBAction)popTo1:(id)sender {
     
-    [(TSNavigationController*)self.navigationController popViewControllerWithTSAnimate];
+    [(DrawerNavigationController*)self.navigationController popViewControllerWithDrawerAnimate];
 }
 @end

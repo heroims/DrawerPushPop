@@ -11,6 +11,22 @@
 
 @implementation DrawerView
 
+#if __has_feature(objc_arc)
+#else
+-(void)dealloc{
+    if (lastViewImage!=nil) {
+        [lastViewImage release];
+    }
+    if (_parentView!=nil) {
+        [_parentView release];
+    }
+    if (_contentView!=nil) {
+        [_contentView release];
+    }
+    [super dealloc];
+}
+#endif
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -30,6 +46,11 @@
                                                        action:@selector(HandlePan:)];
         [self addGestureRecognizer:panGestureRecognier];
         
+#if __has_feature(objc_arc)
+#else
+        [panGestureRecognier release];
+#endif
+        
         if (UIGraphicsBeginImageContextWithOptions != NULL) {
             UIGraphicsBeginImageContextWithOptions(parentView.frame.size, NO, 0.0);
         }
@@ -44,6 +65,11 @@
         UIImageView *imageView = [[UIImageView alloc]initWithImage:lastViewImage];
         imageView.frame  = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         [self addSubview:imageView];
+        
+#if __has_feature(objc_arc)
+#else
+        [imageView release];
+#endif
     }
     
     self.parentView = parentView;

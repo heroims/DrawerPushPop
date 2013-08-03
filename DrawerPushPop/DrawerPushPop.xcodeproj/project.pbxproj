@@ -19,11 +19,11 @@
 		D8C5A68617AD701200B09064 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C5A68517AD701200B09064 /* QuartzCore.framework */; };
 		D8C5A68A17AD725D00B09064 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A68817AD725400B09064 /* ViewController.m */; };
 		D8C5A68B17AD725D00B09064 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A68917AD725700B09064 /* ViewController.xib */; };
-		D8C5A68E17AD726E00B09064 /* TSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A68D17AD726D00B09064 /* TSNavigationController.m */; };
 		D8C5A69217AD729300B09064 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69017AD729300B09064 /* ViewController2.m */; };
 		D8C5A69317AD729300B09064 /* ViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C5A69117AD729300B09064 /* ViewController2.xib */; };
-		D8C5A69817AD72AA00B09064 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69517AD72A900B09064 /* DrawerView.m */; };
-		D8C5A69917AD72AA00B09064 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69717AD72AA00B09064 /* DrawerViewController.m */; };
+		D8C5A6A117AD794700B09064 /* DrawerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69C17AD794700B09064 /* DrawerNavigationController.m */; };
+		D8C5A6A217AD794700B09064 /* DrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A69E17AD794700B09064 /* DrawerView.m */; };
+		D8C5A6A317AD794700B09064 /* DrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5A6A017AD794700B09064 /* DrawerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,15 +44,15 @@
 		D8C5A68717AD725200B09064 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D8C5A68817AD725400B09064 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D8C5A68917AD725700B09064 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		D8C5A68C17AD726D00B09064 /* TSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationController.h; sourceTree = "<group>"; };
-		D8C5A68D17AD726D00B09064 /* TSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationController.m; sourceTree = "<group>"; };
 		D8C5A68F17AD729200B09064 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		D8C5A69017AD729300B09064 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		D8C5A69117AD729300B09064 /* ViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController2.xib; sourceTree = "<group>"; };
-		D8C5A69417AD72A900B09064 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
-		D8C5A69517AD72A900B09064 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
-		D8C5A69617AD72AA00B09064 /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
-		D8C5A69717AD72AA00B09064 /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
+		D8C5A69B17AD794700B09064 /* DrawerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerNavigationController.h; sourceTree = "<group>"; };
+		D8C5A69C17AD794700B09064 /* DrawerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerNavigationController.m; sourceTree = "<group>"; };
+		D8C5A69D17AD794700B09064 /* DrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
+		D8C5A69E17AD794700B09064 /* DrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerView.m; sourceTree = "<group>"; };
+		D8C5A69F17AD794700B09064 /* DrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerViewController.h; sourceTree = "<group>"; };
+		D8C5A6A017AD794700B09064 /* DrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +103,7 @@
 			children = (
 				D8C5A66A17AD6F7F00B09064 /* ZYQAppDelegate.h */,
 				D8C5A66B17AD6F7F00B09064 /* ZYQAppDelegate.m */,
-				D8C5A68C17AD726D00B09064 /* TSNavigationController.h */,
-				D8C5A68D17AD726D00B09064 /* TSNavigationController.m */,
-				D8C5A69417AD72A900B09064 /* DrawerView.h */,
-				D8C5A69517AD72A900B09064 /* DrawerView.m */,
-				D8C5A69617AD72AA00B09064 /* DrawerViewController.h */,
-				D8C5A69717AD72AA00B09064 /* DrawerViewController.m */,
+				D8C5A69A17AD794700B09064 /* DrawerNavigation */,
 				D8C5A68717AD725200B09064 /* ViewController.h */,
 				D8C5A68817AD725400B09064 /* ViewController.m */,
 				D8C5A68917AD725700B09064 /* ViewController.xib */,
@@ -133,6 +128,19 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		D8C5A69A17AD794700B09064 /* DrawerNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5A69B17AD794700B09064 /* DrawerNavigationController.h */,
+				D8C5A69C17AD794700B09064 /* DrawerNavigationController.m */,
+				D8C5A69D17AD794700B09064 /* DrawerView.h */,
+				D8C5A69E17AD794700B09064 /* DrawerView.m */,
+				D8C5A69F17AD794700B09064 /* DrawerViewController.h */,
+				D8C5A6A017AD794700B09064 /* DrawerViewController.m */,
+			);
+			path = DrawerNavigation;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -205,10 +213,10 @@
 				D8C5A66817AD6F7F00B09064 /* main.m in Sources */,
 				D8C5A66C17AD6F7F00B09064 /* ZYQAppDelegate.m in Sources */,
 				D8C5A68A17AD725D00B09064 /* ViewController.m in Sources */,
-				D8C5A68E17AD726E00B09064 /* TSNavigationController.m in Sources */,
 				D8C5A69217AD729300B09064 /* ViewController2.m in Sources */,
-				D8C5A69817AD72AA00B09064 /* DrawerView.m in Sources */,
-				D8C5A69917AD72AA00B09064 /* DrawerViewController.m in Sources */,
+				D8C5A6A117AD794700B09064 /* DrawerNavigationController.m in Sources */,
+				D8C5A6A217AD794700B09064 /* DrawerView.m in Sources */,
+				D8C5A6A317AD794700B09064 /* DrawerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +331,7 @@
 				D8C5A67717AD6F7F00B09064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

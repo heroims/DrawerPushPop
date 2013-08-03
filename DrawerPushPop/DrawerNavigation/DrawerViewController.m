@@ -15,6 +15,15 @@
 
 @implementation DrawerViewController
 
+#if __has_feature(objc_arc)
+#else
+-(void)dealloc{
+    [_imageView release];
+    [_contentView release];
+    [super dealloc];
+}
+#endif
+
 - (id)init
 {
 	if (self = [super init]) {

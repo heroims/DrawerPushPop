@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSNavigationController : UINavigationController
+@interface DrawerNavigationController : UINavigationController
 
 @property (nonatomic, strong) UIImageView *imageView;
 
--(void)popViewControllerWithTSAnimate;
+-(void)popViewControllerWithDrawerAnimate;
 
 @end

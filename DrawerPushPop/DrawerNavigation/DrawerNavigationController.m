@@ -6,15 +6,23 @@
 //  Copyright (c) 2013年 Zhao Yiqi. All rights reserved.
 //
 
-#import "TSNavigationController.h"
+#import "DrawerNavigationController.h"
 #import "DrawerViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface TSNavigationController ()
+@interface DrawerNavigationController ()
 
 @end
 
-@implementation TSNavigationController
+@implementation DrawerNavigationController
+
+#if __has_feature(objc_arc)
+#else
+-(void)dealloc{
+    [_imageView release];
+    [super dealloc];
+}
+#endif
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +40,10 @@
                                                        initWithTarget:self
                                                        action:@selector(HandlePan:)];
         [self.view addGestureRecognizer:panGestureRecognier];
+#if __has_feature(objc_arc)
+#else
+        [panGestureRecognier release];
+#endif
 	}
 	return self;
 }
@@ -130,7 +142,7 @@
     }
 }
 
--(void)popViewControllerWithTSAnimate{
+-(void)popViewControllerWithDrawerAnimate{
     UIView *curView = [self view];
 
     [UIView animateWithDuration:0.5
