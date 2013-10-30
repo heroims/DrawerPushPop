@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrawerNavigationController : UINavigationController
+@interface DrawerNavigationController : UINavigationController{
+    BOOL isShowDrawerAnimate;
+    UIPanGestureRecognizer *panGestureRecognier;
+}
 
 @property (nonatomic, strong) UIImageView *imageView;
 
--(void)popViewControllerWithDrawerAnimate;
+- (void)pushViewController:(UIViewController *)viewController WithDrawerAnimate:(BOOL)animated;
+- (void)popViewControllerWithDrawerAnimate;
 
 @end

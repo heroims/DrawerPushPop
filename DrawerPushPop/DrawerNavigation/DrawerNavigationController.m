@@ -19,6 +19,7 @@
 #if __has_feature(objc_arc)
 #else
 -(void)dealloc{
+    [panGestureRecognier release];
     [_imageView release];
     [super dealloc];
 }
@@ -36,14 +37,9 @@
 - (id)initWithRootViewController:(UIViewController *)rootViewController {
 	self = [super initWithRootViewController:rootViewController];
 	if (self) {
-        UIPanGestureRecognizer *panGestureRecognier = [[UIPanGestureRecognizer alloc]
-                                                       initWithTarget:self
-                                                       action:@selector(HandlePan:)];
-        [self.view addGestureRecognizer:panGestureRecognier];
-#if __has_feature(objc_arc)
-#else
-        [panGestureRecognier release];
-#endif
+        panGestureRecognier = [[UIPanGestureRecognizer alloc]
+                               initWithTarget:self
+                               action:@selector(HandlePan:)];
 	}
 	return self;
 }
@@ -60,9 +56,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-	if ([viewController isKindOfClass:[DrawerViewController class]]) {
+- (void)pushViewController:(UIViewController *)viewController WithDrawerAnimate:(BOOL)animated {
+    if ([viewController isKindOfClass:[DrawerViewController class]]) {
         DrawerViewController *controller = (DrawerViewController *) viewController;
+        [controller.view addGestureRecognizer:panGestureRecognier];
+        
         if ([controller isDrawerView]) {
             [controller initDrawerView];
             if (_imageView) {
@@ -89,21 +87,43 @@
     }
 	
 	[super pushViewController:viewController animated:animated];
-//    [super pushViewController:viewController animated:animated];
+    
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if ([viewController isKindOfClass:[DrawerViewController class]]) {
+        DrawerViewController *controller = (DrawerViewController *) viewController;
+        if ([controller isDrawerView]) {
+            [controller initDrawerView];
+            if (_imageView) {
+                [_imageView removeFromSuperview];
+            }
+            _imageView = controller.imageView;
+            [[[ZYQAppDelegate instance] window] insertSubview:_imageView atIndex:0];
+            if (animated) {
+                [super pushViewController:controller animated:animated];
+                return;
+            }
+        }
+    }
+	
+	[super pushViewController:viewController animated:animated];
+    
 }
 
 - (void)HandlePan:(UIPanGestureRecognizer*)panGestureRecognizer{
     UIView *curView = [self view];
     if (![[[self viewControllers] lastObject] isKindOfClass:[DrawerViewController class]]) {
+        
         return;
     }
     DrawerViewController *lastViewController = (DrawerViewController *)[[self viewControllers] lastObject];
     if (![lastViewController isDrawerView]) {
         return;
     }
-   
+    
     CGPoint translation = [panGestureRecognizer translationInView:self.imageView];
-    NSLog(@"x:%.2f", translation.x);
+    //    NSLog(@"x:%.2f", translation.x);
     
     if ([[self viewControllers] count] > 1) {
         if (translation.x > 0) {
@@ -144,7 +164,7 @@
 
 -(void)popViewControllerWithDrawerAnimate{
     UIView *curView = [self view];
-
+    
     [UIView animateWithDuration:0.5
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -154,27 +174,27 @@
                          [_imageView setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
                      }completion:^(BOOL finish){
                          [curView setTransform:CGAffineTransformMakeTranslation(0, 0)];
-                         [self popViewControllerAnimated:NO];
+                         
+                         if (_imageView) {
+                             [_imageView removeFromSuperview];
+                         }
+                         
+                         [super popViewControllerAnimated:NO];
+                         
+                         UIViewController *lastController = [[self viewControllers] lastObject];
+                         if (_imageView) {
+                             [_imageView removeFromSuperview];
+                         }
+                         if ([lastController isKindOfClass:[DrawerViewController class]]) {
+                             DrawerViewController *curViewController = (DrawerViewController *)lastController;
+                             if ([curViewController isDrawerView] && curViewController.imageView) {
+                                 _imageView = curViewController.imageView;
+                                 [[[ZYQAppDelegate instance] window] insertSubview:_imageView atIndex:0];
+                             }
+                         }
+                         
                      }];
-
-}
-
-- (UIViewController *)popViewControllerAnimated:(BOOL)animated
-{
-    UIViewController *poppedViewController;
-    poppedViewController = (UIViewController *)[super popViewControllerAnimated:animated];
-    UIViewController *lastController = [[self viewControllers] lastObject];
-    if (_imageView) {
-        [_imageView removeFromSuperview];
-    }
-    if ([lastController isKindOfClass:[DrawerViewController class]]) {
-        DrawerViewController *curViewController = (DrawerViewController *)lastController;
-        if ([curViewController isDrawerView] && curViewController.imageView) {
-            _imageView = curViewController.imageView;
-            [[[ZYQAppDelegate instance] window] insertSubview:_imageView atIndex:0];
-        }
-    }
-    return poppedViewController;
+    
 }
 
 - (NSArray *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated {
@@ -189,14 +209,6 @@
             _imageView = curViewController.imageView;
             [[[ZYQAppDelegate instance] window] insertSubview:_imageView atIndex:0];
         }
-    }
-	return poppedViewController;
-}
-
-- (NSArray *)popToRootViewControllerAnimated:(BOOL)animated {
-	NSArray *poppedViewController = [super popToRootViewControllerAnimated:animated];
-    if (_imageView) {
-        [_imageView removeFromSuperview];
     }
 	return poppedViewController;
 }
