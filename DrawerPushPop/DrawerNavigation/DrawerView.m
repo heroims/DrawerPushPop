@@ -41,15 +41,6 @@
     self = [super initWithFrame:CGRectMake(0,0,contentView.frame.size.width, contentView.frame.size.height)];
     if (self) {
         [self addSubview:contentView];
-        UIPanGestureRecognizer *panGestureRecognier = [[UIPanGestureRecognizer alloc]
-                                                       initWithTarget:self
-                                                       action:@selector(HandlePan:)];
-        [self addGestureRecognizer:panGestureRecognier];
-        
-#if __has_feature(objc_arc)
-#else
-        [panGestureRecognier release];
-#endif
         
         if (UIGraphicsBeginImageContextWithOptions != NULL) {
             UIGraphicsBeginImageContextWithOptions(parentView.frame.size, NO, 0.0);
@@ -76,92 +67,6 @@
     return self;
 }
 
-
-//- (void)HandlePan:(UIPanGestureRecognizer*)panGestureRecognizer{
-//    
-//    CGPoint translation = [panGestureRecognizer translationInView:self.parentView];
-//    float x = self.center.x + translation.x;
-//    if (x < 160) {
-//        x = 160;
-//    }
-//    
-//    if(translation.x > 0){
-//        if (!isPanComment) {
-//            self.center = CGPointMake(x, 230);
-//        }
-//    }
-//    
-//    if (translation.x < 0 && self.center.x > 160) {
-//        if (!isPanComment) {
-//            self.center = CGPointMake(x, 230);
-//        }
-//    }else if(translation.x < 0){
-//        isPanComment = YES;
-//        commentView.center = CGPointMake(commentView.center.x + translation.x, 230);
-//    }
-//    
-//    if (commentView.center.x < 480 && translation.x > 0) {
-//        isPanComment = YES;
-//        commentView.center = CGPointMake(commentView.center.x + translation.x, 230);
-//    }
-//    
-//    if (panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
-//        if (commentView.center.x < 400) {
-//            [UIView animateWithDuration:0.4
-//                                  delay:0.1
-//                                options:UIViewAnimationCurveEaseInOut
-//                             animations:^(void){
-//                                 commentView.center = CGPointMake(160, 230);
-//                             }completion:^(BOOL finish){
-//                                 isPanComment = NO;
-//                             }];
-//        }else{
-//            [UIView animateWithDuration:0.4
-//                                  delay:0.1
-//                                options:UIViewAnimationCurveEaseInOut
-//                             animations:^(void){
-//                                 commentView.center = CGPointMake(480, 230);
-//                             }completion:^(BOOL finish){
-//                                 isPanComment = NO;
-//                             }];
-//        }
-//        if (self.center.x > 190) {
-//            [UIView animateWithDuration:0.4
-//                                  delay:0.1
-//                                options:UIViewAnimationCurveEaseInOut
-//                             animations:^(void){
-//                                 self.center = CGPointMake(480, 230);
-//                             }completion:^(BOOL finish){
-//                                 [self.parentView exchangeSubviewAtIndex:1 withSubviewAtIndex:2];
-//                             }];
-//        }else{
-//            [UIView animateWithDuration:0.4
-//                                  delay:0.1
-//                                options:UIViewAnimationCurveEaseInOut
-//                             animations:^(void){
-//                                 self.center = CGPointMake(160, 230);
-//                             }completion:^(BOOL finish){
-//                                 
-//                             }];
-//            
-//        }
-//        
-//    }
-//    
-//    [panGestureRecognizer setTranslation:CGPointZero inView:self.parentView];
-//    
-//}
-//
-//- (void) back:(id)sender{
-//    [UIView animateWithDuration:0.4
-//                          delay:0.1
-//                        options:UIViewAnimationCurveEaseInOut
-//                     animations:^(void){
-//                         self.center = CGPointMake(480, 230);
-//                     }completion:^(BOOL finish){
-//                         [self.parentView exchangeSubviewAtIndex:1 withSubviewAtIndex:2];
-//                     }];
-//}
 
 /*
  // Only override drawRect: if you perform custom drawing.
